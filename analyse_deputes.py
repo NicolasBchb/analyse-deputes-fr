@@ -101,17 +101,6 @@ df_deputes["2022"]["parti_ratt_financier"] = df_deputes["2022"]["nuance"].map(pa
 
 
 # %% prepare data
-for mandat in df_deputes:
-    df_deputes[mandat]["date_naissance"] = pd.to_datetime(
-        df_deputes[mandat]["date_naissance"]
-    )
-    df_deputes[mandat]["age"] = df_deputes[mandat]["date_naissance"].apply(
-        lambda x: (int(mandat) - x.year)
-    )
-    for column in df_deputes[mandat].columns:
-        if column.startswith("twitter_data."):
-            df_deputes[mandat].drop(column, axis=1, inplace=True)
-
 partis_colors = {
     "2022": {
         "NUPES": "red",
@@ -147,11 +136,54 @@ partis_colors = {
     },
 }
 
-# %% plot boxplot of age by party for each mandat (2012, 2017, 2022)
+elections ={
+    "2012": {
+        "presidentielles_1er":"2012-04-22 12:00:00",
+        "presidentielles_2eme":"2012-05-06 12:00:00",
+        "législatives_1er":"2012-06-10 12:00:00",
+        "législatives_2eme":"2012-06-17 12:00:00",
+    },
+    "2017": {
+        "presidentielles_1er":"2017-04-23 12:00:00",
+        "presidentielles_2eme":"2017-05-07 12:00:00",
+        "législatives_1er":"2017-06-11 12:00:00",
+        "législatives_2eme":"2017-06-18 12:00:00",
+    },
+    "2022": {
+        "presidentielles_1er":"2022-04-10 12:00:00",
+        "presidentielles_2eme":"2022-04-24 12:00:00",
+        "législatives_1er":"2022-06-12 12:00:00",
+        "législatives_2eme":"2022-06-19 12:00:00",
+    }
+}
+
 for mandat in df_deputes:
+    df_deputes[mandat]["date_naissance"] = pd.to_datetime(
+        df_deputes[mandat]["date_naissance"]
+    )
+    df_deputes[mandat]["age"] = df_deputes[mandat]["date_naissance"].apply(
+        lambda x: (int(mandat) - x.year)
+    )
+    for column in df_deputes[mandat].columns:
+        if column.startswith("twitter_data."):
+            df_deputes[mandat].drop(column, axis=1, inplace=True)
+
     df_deputes[mandat]["parti_ratt_financier"][
         ~df_deputes[mandat]["parti_ratt_financier"].isin(partis_colors[mandat].keys())
     ] = "Autres"
+
+    df_deputes[mandat]["count"] = 1
+    df_deputes[mandat]["sexe"][df_deputes[mandat]["sexe"] == "F"] = "Femmes"
+    df_deputes[mandat]["sexe"][df_deputes[mandat]["sexe"] == "H"] = "Hommes"
+
+
+# %% Display data
+for mandat in df_deputes:
+    dtale.show(df_deputes[mandat]).open_browser()
+
+
+# %% plot boxplot of age by party for each mandat (2012, 2017, 2022)
+for mandat in df_deputes:
     ages_2017 = px.box(
         df_deputes[mandat],
         x="age",
@@ -178,9 +210,6 @@ for mandat in df_deputes:
 
 # %% plot sunburst of parite by party for each mandat (2012, 2017, 2022)
 for mandat in df_deputes:
-    df_deputes[mandat]["count"] = 1
-    df_deputes[mandat]["sexe"][df_deputes[mandat]["sexe"] == "F"] = "Femmes"
-    df_deputes[mandat]["sexe"][df_deputes[mandat]["sexe"] == "H"] = "Hommes"
     parite = px.sunburst(
         df_deputes[mandat],
         path=["parti_ratt_financier", "sexe"],
@@ -196,49 +225,46 @@ for mandat in df_deputes:
     parite.update_traces(textinfo="label+percent parent", textfont=dict(size=16))
     parite.write_html(f"viz/parite_{mandat}.html")
 
-# %%
-for mandat in df_deputes:
-    dtale.show(df_deputes[mandat]).open_browser()
 
+# %% Sunburst à 3 étages pour 2017
 
-# %%
-for mandat in ["2017", "2022"]: #df_deputes:
-    df_deputes[mandat]["nbre_mandats"] = df_deputes[mandat]["anciens_mandats"].map(lambda x: len(json.load(x)))
-    df_mandats_group = df_deputes[mandat].groupby(["parti_ratt_financier"]).mean().reset_index()
-    histo_mandats = px.histogram(
-        df_mandats_group,
-        x="parti_ratt_financier",
-        y="nbre_mandats",
-        color="parti_ratt_financier",
-        color_discrete_map=partis_colors[mandat],
-    )
-    histo_mandats.update_layout(
-        title_text=f"<b>Nombre de mandats moyen par député par parti ({mandat})</b>",
-        margin=dict(l=0, r=0, t=70, b=40),
-        plot_bgcolor="rgb(243, 243, 243)",
-    )
-    # histo_mandats.update_traces(textinfo="label+percent parent", textfont=dict(size=16))
-    histo_mandats.write_html(f"viz/mandats_{mandat}.html")
+df_deputes["2017"]["intergroupe"] = "Autres"
 
-# %%
-
-elections ={
-    "2012": {
-        "presidentielles_1er":"2012-04-22 12:00:00",
-        "presidentielles_2eme":"2012-05-06 12:00:00",
-        "législatives_1er":"2012-06-10 12:00:00",
-        "législatives_2eme":"2012-06-17 12:00:00",
-    },
-    "2017": {
-        "presidentielles_1er":"2017-04-23 12:00:00",
-        "presidentielles_2eme":"2017-05-07 12:00:00",
-        "législatives_1er":"2017-06-11 12:00:00",
-        "législatives_2eme":"2017-06-18 12:00:00",
-    },
-    "2022": {
-        "presidentielles_1er":"2022-04-10 12:00:00",
-        "presidentielles_2eme":"2022-04-24 12:00:00",
-        "législatives_1er":"2022-06-12 12:00:00",
-        "législatives_2eme":"2022-06-19 12:00:00",
-    }
+segmentation_2017 = {
+    "Union des démocrates, radicaux et libéraux": "LR + UDI",
+    "Les Républicains": "LR + UDI",
+    "La République en Marche": "LREM + Modem",
+    "Mouvement Démocrate": "LREM + Modem",
+    "Parti socialiste": "Actuelle NUPES",
+    "La France Insoumise": "Actuelle NUPES",
+    "Europe Écologie Les Verts": "Actuelle NUPES",
+    "Parti communiste français": "Actuelle NUPES",
+    "Régions et peuples solidaires": "Autres",
+    "Rassemblement national": "Autres", 
+    "Autres": "Autres"
 }
+
+df_deputes["2017"]["intergroupe"] = df_deputes["2017"]["parti_ratt_financier"].map(
+    segmentation_2017
+)
+
+parite = px.sunburst(
+        df_deputes["2017"],
+        path=["intergroupe", "parti_ratt_financier", "sexe"],
+        values="count",
+        # color="intergroupe",
+        color_discrete_map={
+            "LR + UDI": "blue",
+            "LREM + Modem": "orange",
+            "Actuelle NUPES": "red",
+            "Autres": "grey",
+        },
+    )
+parite.update_layout(
+    title_text="<b>Répartition des députés par parti et sexe (2017)</b>",
+    margin=dict(l=0, r=0, t=70, b=40),
+    plot_bgcolor="rgb(243, 243, 243)",
+)
+parite.update_traces(textinfo="label+percent parent", textfont=dict(size=16))
+parite.write_html("viz/parite_2017_intergroupes.html")
+# %%
