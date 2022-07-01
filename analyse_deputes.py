@@ -184,7 +184,7 @@ for mandat in df_deputes:
 
 # %% plot boxplot of age by party for each mandat (2012, 2017, 2022)
 for mandat in df_deputes:
-    ages_2017 = px.box(
+    ages_box = px.box(
         df_deputes[mandat],
         x="age",
         y="parti_ratt_financier",
@@ -193,19 +193,19 @@ for mandat in df_deputes:
         color_discrete_map=partis_colors[mandat],
         hover_name="nom",
     )
-    ages_2017.update_layout(
+    ages_box.update_layout(
         margin=dict(l=0, r=0, t=70, b=40),
         plot_bgcolor="rgb(243, 243, 243)",
         title_text=f"<b>Répartition de l'âge des députés par parti ({mandat})</b>",
     )
-    ages_2017.update_traces(showlegend=False, line=dict(width=0.75))
-    ages_2017.update_yaxes(
+    ages_box.update_traces(showlegend=False, line=dict(width=0.75))
+    ages_box.update_yaxes(
         title_text="<b>Parti politique</b>", categoryorder="median ascending"
     )
-    ages_2017.update_xaxes(title_text="<b><i>Âge</i></b>")
-    for data in ages_2017.data:
+    ages_box.update_xaxes(title_text="<b><i>Âge</i></b>")
+    for data in ages_box.data:
         data.marker.size = 2.5
-    ages_2017.write_html(f"viz/ages_{mandat}.html")
+    ages_box.write_html(f"viz/ages_{mandat}.html")
 
 
 # %% plot sunburst of parite by party for each mandat (2012, 2017, 2022)
@@ -267,4 +267,103 @@ parite.update_layout(
 )
 parite.update_traces(textinfo="label+percent parent", textfont=dict(size=16))
 parite.write_html("viz/parite_2017_intergroupes.html")
+
+
 # %%
+for mandat in df_deputes:
+    ages = px.histogram(
+        df_deputes[mandat],
+        x="age",
+        y="count",
+        nbins=df_deputes[mandat]["age"].nunique(),
+        marginal="box", # can be `rug`, `violin`
+    )
+    ages.update_layout(
+        title_text=f"<b>Histogramme des âges des députés ({mandat})</b>",
+        margin=dict(l=0, r=0, t=70, b=40),
+        plot_bgcolor="rgb(243, 243, 243)",
+        bargap=0.2
+    )
+    ages.update_xaxes(title_text="<b><i>Âge</i></b>")
+    ages.update_yaxes(title_text="<b>Nombre de députés</b>")
+    ages.write_html(f"viz/ages_histo_{mandat}.html")
+
+
+# %%
+for mandat in df_deputes:
+    df_deputes[mandat]["annee_mandat"] = mandat
+
+df_global = pd.concat([df_deputes[mandat] for mandat in df_deputes])
+
+ages = px.histogram(
+    df_global,
+    x="age",
+    y="count",
+    nbins=df_deputes[mandat]["age"].nunique(),
+    marginal="box", # can be `rug`, `violin`,
+    color="annee_mandat",
+    barmode='group',
+    color_discrete_sequence=px.colors.qualitative.Safe,
+    color_discrete_map={
+        "2012": "#F0244D",
+        "2017": "#75B0F0",
+        "2022": "#FC8C44",
+    },
+    opacity=0.7,
+)
+
+# ages.update_traces(line=dict(width=0.75))
+ages.update_layout(
+    title_text="<b>Répartition des âges des députés par mandat</b>",
+    margin=dict(l=0, r=0, t=70, b=40),
+    plot_bgcolor="rgb(243, 243, 243)",
+    bargap=0.3
+)
+ages.update_xaxes(title_text="<b><i>Âge</i></b>")
+ages.update_yaxes(title_text="<b>Nombre de députés</b>")
+ages.write_html("viz/ages_histo_global.html")
+
+
+# %%
+influenceurs = {}
+for mandat in df_deputes:
+    influenceurs[mandat] = px.histogram(
+        df_deputes[mandat].sort_values("twitter_followers", ascending=False).head(30),
+        x="twitter_name",
+        y="twitter_followers",
+        title=f"Influenceurs députés de {mandat}",
+        log_y=True,
+        color = "parti_ratt_financier",
+        color_discrete_map=partis_colors[mandat],
+        opacity=0.66,
+    ).update_xaxes(categoryorder="total descending")
+
+    influenceurs[mandat].update_xaxes(title_text="<b><i>Nom</i></b>")
+    influenceurs[mandat].update_yaxes(title_text="<b>Nombre de followers</b>")
+
+    influenceurs[mandat].write_html(f"twitter_data/deputes_{mandat}_Twitter/influenceurs_{mandat}.html")
+
+
+# %%
+accros = {}
+for mandat in df_deputes:
+    accros[mandat] = px.histogram(
+        df_deputes[mandat].sort_values("twitter_tweets", ascending=False).head(30),
+        x="twitter_name",
+        y="twitter_tweets",
+        title=f"Députés accros à Twitter de {mandat}",
+        # log_y=True,
+        color = "parti_ratt_financier",
+        color_discrete_map=partis_colors[mandat],
+        opacity=0.66,
+    ).update_xaxes(categoryorder="total descending")
+
+    accros[mandat].update_xaxes(title_text="<b><i>Nom</i></b>")
+    accros[mandat].update_yaxes(title_text="<b>Nombre de tweets</b>")
+
+    accros[mandat].write_html(f"twitter_data/deputes_{mandat}_Twitter/accros_{mandat}.html")
+
+
+# %%
+
+
