@@ -1,0 +1,1499 @@
+{
+    "acteur": {
+        "@xmlns": "http://schemas.assemblee-nationale.fr/referentiel",
+        "uid": {
+            "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "@xsi:type": "IdActeur_type",
+            "#text": "PA607090"
+        },
+        "etatCivil": {
+            "ident": {
+                "civ": "M.",
+                "prenom": "Jean-Pierre",
+                "nom": "Vigier",
+                "alpha": "VigierJ",
+                "trigramme": "JVI"
+            },
+            "infoNaissance": {
+                "dateNais": "1969-10-22",
+                "villeNais": "Brioude",
+                "depNais": "Haute-Loire",
+                "paysNais": "France"
+            },
+            "dateDeces": {
+                "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "@xsi:nil": "true"
+            }
+        },
+        "profession": {
+            "libelleCourant": "Fonctionnaire de cat\u00e9gorie A",
+            "socProcINSEE": {
+                "catSocPro": "Cadres de la fonction publique, professions intellectuelles et  artistiques",
+                "famSocPro": "Cadres et professions intellectuelles sup\u00e9rieures"
+            }
+        },
+        "uri_hatvp": "https://www.hatvp.fr/pages_nominatives/vigier-jean-pierre",
+        "adresses": {
+            "adresse": [
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdressePostale_Type",
+                    "uid": "AD645871",
+                    "type": "0",
+                    "typeLibelle": "Adresse officielle",
+                    "poids": "1",
+                    "adresseDeRattachement": null,
+                    "intitule": "Assembl\u00e9e nationale,",
+                    "numeroRue": "126",
+                    "nomRue": "Rue de l'Universit\u00e9,",
+                    "complementAdresse": null,
+                    "codePostal": "75355",
+                    "ville": "PARIS 07 SP"
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdressePostale_Type",
+                    "uid": "AD645874",
+                    "type": "2",
+                    "typeLibelle": "Adresse publi\u00e9e de circonscription",
+                    "poids": "22",
+                    "adresseDeRattachement": null,
+                    "intitule": "Permanence parlementaire",
+                    "numeroRue": "12",
+                    "nomRue": "Avenue Cl\u00e9ment Charbonnier",
+                    "complementAdresse": null,
+                    "codePostal": "43000",
+                    "ville": "Le-Puy-en-Velay"
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdresseMail_Type",
+                    "uid": "AD648801",
+                    "type": "15",
+                    "typeLibelle": "M\u00e8l",
+                    "poids": null,
+                    "adresseDeRattachement": null,
+                    "valElec": "jean-pierre.vigier@assemblee-nationale.fr"
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdresseSiteWeb_Type",
+                    "uid": "AD725740",
+                    "type": "22",
+                    "typeLibelle": "Site internet",
+                    "poids": null,
+                    "adresseDeRattachement": null,
+                    "valElec": "www.jpvigier.fr"
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdresseSiteWeb_Type",
+                    "uid": "AD726004",
+                    "type": "25",
+                    "typeLibelle": "Facebook",
+                    "poids": null,
+                    "adresseDeRattachement": null,
+                    "valElec": "VigierJP"
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "AdresseSiteWeb_Type",
+                    "uid": "AD726506",
+                    "type": "24",
+                    "typeLibelle": "Twitter",
+                    "poids": null,
+                    "adresseDeRattachement": null,
+                    "valElec": "@j_pVigier"
+                }
+            ]
+        },
+        "mandats": {
+            "mandat": [
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM752551",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFOCOM",
+                    "dateDebut": "2018-03-06",
+                    "datePublication": "2018-03-07",
+                    "dateFin": "2018-07-24",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO752538"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM772742",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFOCOM",
+                    "dateDebut": "2020-06-19",
+                    "datePublication": null,
+                    "dateFin": "2020-12-17",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO772725"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM745768",
+                    "acteurRef": "PA607090",
+                    "legislature": null,
+                    "typeOrgane": "PARPOL",
+                    "dateDebut": "2017-12-01",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "5",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO710396"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM710598",
+                    "acteurRef": "PA607090",
+                    "legislature": null,
+                    "typeOrgane": "PARPOL",
+                    "dateDebut": "2015-12-01",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "5",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO710396"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM762239",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFO",
+                    "dateDebut": "2019-01-23",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "10",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO762207"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM782311",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFO",
+                    "dateDebut": "2021-03-30",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "10",
+                    "nominPrincipale": "0",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO782307"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM782312",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFO",
+                    "dateDebut": "2021-03-30",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "5",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Co-rapporteur",
+                        "libQualite": "Co-rapporteur",
+                        "libQualiteSex": "Co-rapporteur"
+                    },
+                    "organes": {
+                        "organeRef": "PO782307"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM764474",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "CNPE",
+                    "dateDebut": "2019-04-05",
+                    "datePublication": "2019-04-05",
+                    "dateFin": "2019-09-25",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO764254"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatMission_Type",
+                    "uid": "PM772892",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "MISINFOCOM",
+                    "dateDebut": "2020-06-24",
+                    "datePublication": "2020-06-25",
+                    "dateFin": "2020-12-17",
+                    "preseance": "1",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Pr\u00e9sident",
+                        "libQualite": "Pr\u00e9sident",
+                        "libQualiteSex": "Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO772725"
+                    },
+                    "libelle": null,
+                    "missionSuivanteRef": null,
+                    "missionPrecedenteRef": null
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM714275",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GP",
+                    "dateDebut": "2016-07-11",
+                    "datePublication": "2016-07-12",
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre du",
+                        "libQualiteSex": "Membre du"
+                    },
+                    "organes": {
+                        "organeRef": "PO774834"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM785780",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2021-09-21",
+                    "datePublication": "2021-09-21",
+                    "dateFin": "2021-10-07",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO420120"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM657170",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2012-06-28",
+                    "datePublication": "2012-06-28",
+                    "dateFin": "2017-06-20",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419865"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM731683",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2017-06-29",
+                    "datePublication": "2017-06-29",
+                    "dateFin": "2019-02-13",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO59048"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM762721",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2019-02-14",
+                    "datePublication": "2019-02-14",
+                    "dateFin": "2019-09-30",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419865"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM767280",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2019-10-01",
+                    "datePublication": "2019-10-01",
+                    "dateFin": "2019-10-29",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419610"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM787249",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2021-11-11",
+                    "datePublication": "2021-11-11",
+                    "dateFin": null,
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419610"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM768117",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2019-11-08",
+                    "datePublication": "2019-11-08",
+                    "dateFin": "2021-09-20",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419610"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM787196",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2021-11-10",
+                    "datePublication": "2021-11-10",
+                    "dateFin": "2021-11-10",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO420120"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM767868",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2019-10-30",
+                    "datePublication": "2019-10-30",
+                    "dateFin": "2019-11-07",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419865"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM786191",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "COMPER",
+                    "dateDebut": "2021-10-08",
+                    "datePublication": "2021-10-08",
+                    "dateFin": "2021-11-09",
+                    "preseance": "32",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO419610"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM684282",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "ORGEXTPARL",
+                    "dateDebut": "2012-11-08",
+                    "datePublication": "2012-11-09",
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Titulaire",
+                        "libQualite": "Membre titulaire",
+                        "libQualiteSex": "Membre titulaire"
+                    },
+                    "organes": {
+                        "organeRef": "PO60235"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM678794",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "ORGEXTPARL",
+                    "dateDebut": "2012-09-25",
+                    "datePublication": "2012-09-26",
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Titulaire",
+                        "libQualite": "Membre titulaire",
+                        "libQualiteSex": "Membre titulaire"
+                    },
+                    "organes": {
+                        "organeRef": "PO415444"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM756042",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "CMP",
+                    "dateDebut": "2018-05-11",
+                    "datePublication": "2018-05-12",
+                    "dateFin": "2018-07-31",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Titulaire",
+                        "libQualite": "Membre titulaire",
+                        "libQualiteSex": "Membre titulaire"
+                    },
+                    "organes": {
+                        "organeRef": "PO755721"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM697072",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-09-18",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO687613"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM700440",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2014-03-03",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO686433"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM750971",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2018-02-19",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO746880"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM688791",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-01-25",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO686501"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM694043",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-04-23",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO689000"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM694296",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-04-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO689012"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM689147",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-01-15",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO686617"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM695198",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2012-12-18",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO686266"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM687671",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-01-10",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO686397"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681454",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675845"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681456",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675766"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681460",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675722"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681462",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675689"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738812",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733117"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681464",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675833"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738814",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733412"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM684414",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-11-14",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675811"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738816",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "0",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733597"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681455",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675847"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681457",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675813"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681461",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675696"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738811",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO732939"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681459",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675723"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681463",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675727"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738813",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "0",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733322"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM681465",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-10-16",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675794"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738815",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733567"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM684024",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-11-07",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "20",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO675799"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM738817",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-10",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "20",
+                    "nominPrincipale": "0",
+                    "infosQualite": {
+                        "codeQualite": "Membre",
+                        "libQualite": "Membre",
+                        "libQualiteSex": "Membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO733672"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM691962",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GE",
+                    "dateDebut": "2013-02-25",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO686397"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM686955",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-12-05",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO675689"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM685237",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2012-11-27",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO675723"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM746375",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-12-06",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO733672"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM693971",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2013-03-20",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO675727"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM741773",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-10-25",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO733597"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatSimple_Type",
+                    "uid": "PM742586",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "GA",
+                    "dateDebut": "2017-11-07",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "8",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "Vice-Pr\u00e9sident",
+                        "libQualite": "Vice-Pr\u00e9sident",
+                        "libQualiteSex": "Vice-Pr\u00e9sident"
+                    },
+                    "organes": {
+                        "organeRef": "PO733322"
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatParlementaire_type",
+                    "uid": "PM722796",
+                    "acteurRef": "PA607090",
+                    "legislature": "15",
+                    "typeOrgane": "ASSEMBLEE",
+                    "dateDebut": "2017-06-18",
+                    "datePublication": null,
+                    "dateFin": null,
+                    "preseance": "50",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "membre",
+                        "libQualite": "membre",
+                        "libQualiteSex": "membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO717460"
+                    },
+                    "suppleants": {
+                        "suppleant": {
+                            "dateDebut": "2017-06-18",
+                            "dateFin": null,
+                            "suppleantRef": "PA719906"
+                        }
+                    },
+                    "chambre": null,
+                    "election": {
+                        "lieu": {
+                            "region": "Auvergne-Rh\u00f4ne-Alpes",
+                            "regionType": "M\u00e9tropolitain",
+                            "departement": "Haute-Loire",
+                            "numDepartement": "43",
+                            "numCirco": "2"
+                        },
+                        "causeMandat": "\u00e9lections g\u00e9n\u00e9rales",
+                        "refCirconscription": "PO717836"
+                    },
+                    "mandature": {
+                        "datePriseFonction": "2017-06-21",
+                        "causeFin": null,
+                        "premiereElection": "1",
+                        "placeHemicycle": "054",
+                        "mandatRemplaceRef": null
+                    },
+                    "collaborateurs": {
+                        "collaborateur": [
+                            {
+                                "qualite": "Mme",
+                                "prenom": "C\u00e9line",
+                                "nom": "Ravel",
+                                "dateDebut": null,
+                                "dateFin": null
+                            },
+                            {
+                                "qualite": "Mme",
+                                "prenom": "Ana\u00efs",
+                                "nom": "Roussange-Chaillou",
+                                "dateDebut": null,
+                                "dateFin": null
+                            },
+                            {
+                                "qualite": "M.",
+                                "prenom": "Omar",
+                                "nom": "Ben Abderahmen",
+                                "dateDebut": null,
+                                "dateFin": null
+                            },
+                            {
+                                "qualite": "Mme",
+                                "prenom": "Pauline",
+                                "nom": "Courtois",
+                                "dateDebut": null,
+                                "dateFin": null
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                    "@xsi:type": "MandatParlementaire_type",
+                    "uid": "PM645143",
+                    "acteurRef": "PA607090",
+                    "legislature": "14",
+                    "typeOrgane": "ASSEMBLEE",
+                    "dateDebut": "2012-06-20",
+                    "datePublication": null,
+                    "dateFin": "2017-06-20",
+                    "preseance": "50",
+                    "nominPrincipale": "1",
+                    "infosQualite": {
+                        "codeQualite": "membre",
+                        "libQualite": "membre",
+                        "libQualiteSex": "membre"
+                    },
+                    "organes": {
+                        "organeRef": "PO644420"
+                    },
+                    "suppleants": {
+                        "suppleant": {
+                            "dateDebut": "2012-06-20",
+                            "dateFin": "2017-06-20",
+                            "suppleantRef": "PA642820"
+                        }
+                    },
+                    "chambre": null,
+                    "election": {
+                        "lieu": {
+                            "region": "Auvergne-Rh\u00f4ne-Alpes",
+                            "regionType": "M\u00e9tropolitain",
+                            "departement": "Haute-Loire",
+                            "numDepartement": "43",
+                            "numCirco": "2"
+                        },
+                        "causeMandat": "\u00e9lections g\u00e9n\u00e9rales",
+                        "refCirconscription": "PO644623"
+                    },
+                    "mandature": {
+                        "datePriseFonction": "2012-06-20",
+                        "causeFin": "Fin de l\u00e9gislature",
+                        "premiereElection": "0",
+                        "placeHemicycle": "054",
+                        "mandatRemplaceRef": null
+                    },
+                    "collaborateurs": null
+                }
+            ]
+        }
+    }
+}
