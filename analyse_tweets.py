@@ -1,76 +1,86 @@
 # %% import modules
 import pandas as pd
-import json
-import os
-import dtale
 from tqdm import tqdm
 import plotly.express as px
-import unidecode
-import ast
-import nltk
+from nltk import RegexpTokenizer
 from nltk.corpus import stopwords
-from collections import Counter
+from french_lefff_lemmatizer.french_lefff_lemmatizer import FrenchLefffLemmatizer
+from sklearn.feature_extraction.text import CountVectorizer
+from unidecode import unidecode
+import re
+import os
 
-# %% load data
-df_deputes = {
-    mandat: pd.read_csv(
-        f"twitter_data/deputes_{mandat}_Twitter/deputes_{mandat}_Twitter_clean.csv"
+# %% def ngram
+lemmatizer = FrenchLefffLemmatizer()
+tokener = RegexpTokenizer(r"\w+")
+
+with open("data/stopwords_fr.txt", "r") as f:
+    sw = f.read().splitlines()
+
+sw = [unidecode(mot) for mot in sw]
+
+def clean_stopwords_ngram(token):
+    clean = [
+        lemmatizer.lemmatize(x, "v") for x in token if (x not in sw and not x.isdigit())
+    ]
+    phrase = ""
+    for mot in clean:
+        phrase = phrase + " " + mot
+    return phrase
+
+
+def ngram(sentences, n=3, top=30, firstword=""):
+    c = CountVectorizer(ngram_range=(n, n))
+    X = c.fit_transform(sentences)
+    words = (
+        pd.DataFrame(X.sum(axis=0), columns=c.get_feature_names())
+        .T.sort_values(0, ascending=False)
+        .reset_index()
     )
-    for mandat in ["2012", "2017", "2022"]
-}
+    return words[words["index"].apply(lambda x: firstword in x)].head(top)
+
+
+def ngram_tweets(df, dossier, nom_export, n=3, top=100):
+    df["tweet"] = df["tweet"].map(unidecode)
+    df["tweet"] = df["tweet"].map(lambda x: re.sub("(@[A-Za-z]+[A-Za-z0-9-_]+)", "", x))
+    df["tweet"] = df["tweet"].map(lambda x: re.sub(r"http\S+", "", x))
+    df["tweet"] = df["tweet"].str.lower()
+    df["tweet"] = df["tweet"].map(tokener.tokenize)
+    df["tweet"] = df["tweet"].map(clean_stopwords_ngram)
+
+    gram = ngram(df.tweet, n, top)
+    gram.columns = ["ngram", "count"]
+
+    fig = px.bar(gram, x="ngram", y="count")
+
+    if n == 1:
+        pre = "mono"
+    elif n == 2:
+        pre = "bi"
+    elif n == 3:
+        pre = "tri"
+    else:
+        pre = str(n)
+
+    chemin_xlsx = os.path.join(dossier, nom_export + "_" + pre + "gram.xlsx")
+    gram.to_excel(chemin_xlsx, engine="openpyxl")
+    chemin_html = os.path.join(dossier, nom_export + "_" + pre + "gram.html")
+    fig.write_html(chemin_html)
+
+    return fig
 
 
 # %%
-for mandat in df_deputes:
-    df = df_deputes[mandat].copy()
-    df["date"] = pd.to_datetime(df["date"])
-    df["date"] = df["date"].dt.date
-    df["hashtags"] = df["hashtags"].map(ast.literal_eval)
-    df = df.explode("hashtags")
 
-    hashtags_list = list(
-        df.dropna(axis=0, subset="hashtags").query("hashtags != '[]'")["hashtags"]
-    )
-
-    df_timestamps = pd.DataFrame([], columns=["hashtags", "date", "type"])
-    for hashtag in tqdm(set(hashtags_list)):
-        df_hash = df.query(f"hashtags == '{hashtag}'")
-        df_first = df_hash.sort_values("date").head(1)
-        df_first["type"] = "first"
-        df_last = df_hash.sort_values("date").tail(1)
-        df_last["type"] = "last"
-        df_timestamps = pd.concat(
-            [
-                df_timestamps,
-                df_first[["hashtags", "date", "type"]],
-                df_last[["hashtags", "date", "type"]],
-            ]
-        )
-
-    df_timestamps.to_csv(
-        f"twitter_data/deputes_{mandat}_Twitter/deputes_{mandat}_Twitter_timestamps.csv",
-        index=False,
-    )
-    # dtale.show(df_timestamps).open_browser()
+for mandat in ["2012", "2017", "2022"]:
+    for nuance in os.listdir(f"twitter_data/deputes_{mandat}_Twitter/nuances"):
+        if nuance.endswith(".csv"):
+            df = pd.read_csv(
+                f"twitter_data/deputes_{mandat}_Twitter/nuances/{nuance}"
+            )
+            for n in [1, 2, 3]:
+                ngram_tweets(df, f"twitter_data/deputes_{mandat}_Twitter/nuances", f"{nuance}_{mandat}", n)
 
 
 # %%
-for mandat in df_deputes:
-    df_timestamps = pd.read_csv(f"twitter_data/deputes_{mandat}_Twitter/deputes_{mandat}_Twitter_timestamps.csv")
-    df_timestamps["hashtags"] = "#" + df_timestamps["hashtags"]
-    df_start = df_timestamps.query("type == 'first'")
-    df_end = df_timestamps.query("type == 'last'")
-    
-    start = dict(zip(df_start["hashtags"], df_start["date"]))
-    end = dict(zip(df_end["hashtags"], df_end["date"]))
 
-    df_nodes = pd.read_csv(f"twitter_data/deputes_{mandat}_Twitter/deputes_{mandat}_Twitter_hashtags_nodes.csv")
-    df_nodes["start"] = df_nodes["label"].map(start)
-    df_nodes["end"] = df_nodes["label"].map(end)
-    df_nodes.to_csv(
-        f"twitter_data/deputes_{mandat}_Twitter/deputes_{mandat}_Twitter_hashtags_nodes_timestamps.csv",
-        index=False,
-        )
-
-        
-# %%
